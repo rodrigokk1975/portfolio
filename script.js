@@ -2,6 +2,7 @@
   const root = document.documentElement;
   const themeToggle = document.getElementById("theme-toggle");
   const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // 1. Alternância de tema Claro / Escuro com persistência
   function applyTheme(theme) {
@@ -24,7 +25,6 @@
   }
 
   // 2. Destaque sutil no cursor (apenas desktop e sem prefers-reduced-motion)
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
   if (!reduceMotion && hasFinePointer) {
     window.addEventListener(
@@ -37,12 +37,12 @@
     );
   }
 
-  // 3. Marca o item ativo na navegação lateral conforme a rolagem
+  // 3. Marca o item ativo na navegação lateral e mobile conforme a rolagem
   const sections = document.querySelectorAll("main section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
+  const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link");
 
   if (sections.length && navLinks.length && "IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
+    const navObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
@@ -56,10 +56,53 @@
       { rootMargin: "-25% 0px -60% 0px" }
     );
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => navObserver.observe(section));
   }
 
-  // 4. Botão "Copiar e-mail" com feedback visual e fallback
+  // 4. Filtro de projetos por categoria
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  if (filterButtons.length && projectCards.length) {
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selected = button.getAttribute("data-filter") || "all";
+
+        filterButtons.forEach((btn) => {
+          const isCurrent = btn === button;
+          btn.classList.toggle("is-active", isCurrent);
+          btn.setAttribute("aria-pressed", String(isCurrent));
+        });
+
+        projectCards.forEach((card) => {
+          const category = card.getAttribute("data-category");
+          const shouldShow = selected === "all" || category === selected;
+          card.classList.toggle("is-hidden", !shouldShow);
+        });
+      });
+    });
+  }
+
+  // 5. Reveal suave ao rolar a página
+  const revealElements = document.querySelectorAll(".reveal");
+  if (!reduceMotion && revealElements.length && "IntersectionObserver" in window) {
+    root.classList.add("js-reveal");
+
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.08 }
+    );
+
+    revealElements.forEach((el) => revealObserver.observe(el));
+  }
+
+  // 6. Botão "Copiar e-mail" com feedback visual e fallback
   const copyBtn = document.getElementById("copy-email-btn");
   const copyFeedback = document.getElementById("copy-feedback");
 
@@ -74,7 +117,6 @@
         await navigator.clipboard.writeText(email);
         copyFeedback.textContent = `E-mail copiado: ${email}`;
       } catch {
-        // Fallback para ambientes sem API de clipboard
         const tempInput = document.createElement("input");
         tempInput.value = email;
         document.body.appendChild(tempInput);

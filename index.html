@@ -3,15 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- EDITE AQUI: título e descrição exibidos na aba do navegador e em compartilhamentos -->
-  <title>Seu Nome — Portfólio de Desenvolvimento Web</title>
+  <title>Rodrigo Kenji Kataoka — Desenvolvedor Full-Stack &amp; Mobile</title>
   <meta
     name="description"
-    content="Portfólio pessoal de Seu Nome — estudante de desenvolvimento web construindo interfaces limpas, acessíveis e projetos práticos."
+    content="Portfólio de Rodrigo Kenji Kataoka — estudante de Sistemas de Informação na Unicamp e desenvolvedor Full-Stack & Mobile com TypeScript, React, Node.js, Python e Flutter."
   />
   <meta name="theme-color" content="#0b1120" />
 
-  <!-- Fontes (com fallback seguro para fontes do sistema caso esteja offline) -->
+  <!-- Open Graph / Compartilhamento -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Rodrigo Kenji Kataoka" />
+  <meta property="og:title" content="Rodrigo Kenji Kataoka — Desenvolvedor Full-Stack & Mobile" />
+  <meta
+    property="og:description"
+    content="Estudante de Sistemas de Informação na Unicamp. Projetos full-stack, APIs tipadas, pipelines de dados e aplicativos mobile em Flutter."
+  />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Rodrigo Kenji Kataoka — Desenvolvedor Full-Stack & Mobile" />
+  <meta
+    name="twitter:description"
+    content="Portfólio de projetos Full-Stack, Dados e Mobile — TypeScript, React, Node.js, Python e Flutter."
+  />
+
+  <!-- Favicon SVG inline (monograma RK) -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1120'/%3E%3Crect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='%2338bdf8' stroke-opacity='0.45' stroke-width='2'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='700' font-size='26' fill='%2338bdf8'%3ERK%3C/text%3E%3C/svg%3E"
+  />
+
+  <!-- Fontes (com fallback seguro para fontes do sistema) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -37,14 +59,13 @@
   <div class="layout">
     <!-- =========================================================
          COLUNA ESQUERDA (FIXA NO DESKTOP)
-         EDITE AQUI: seu nome, papel, bio curta e links sociais
          ========================================================= -->
     <aside class="sidebar">
       <div class="sidebar-top">
         <div class="top-bar">
           <span class="status-badge">
             <span class="status-dot" aria-hidden="true"></span>
-            Disponível para estágio e projetos
+            Disponível para estágio em desenvolvimento
           </span>
 
           <button
@@ -65,10 +86,10 @@
         </div>
 
         <header class="hero">
-          <h1 class="hero-name">Seu Nome</h1>
-          <p class="hero-role">Estudante de Desenvolvimento Web</p>
+          <h1 class="hero-name">Rodrigo Kenji Kataoka</h1>
+          <p class="hero-role">Sistemas de Informação (Unicamp) · Full-Stack &amp; Mobile</p>
           <p class="hero-tagline">
-            Construo aplicações web rápidas, acessíveis e bem estruturadas enquanto aprofundo meus estudos em front-end e engenharia de software.
+            Construo aplicações web e mobile bem estruturadas, com código limpo, APIs tipadas, testes automatizados e foco na experiência de uso.
           </p>
 
           <div class="hero-actions">
@@ -77,6 +98,7 @@
           </div>
         </header>
 
+        <!-- Navegação lateral (desktop) -->
         <nav class="nav" aria-label="Navegação principal">
           <ul class="nav-list">
             <li>
@@ -94,7 +116,7 @@
             <li>
               <a class="nav-link" href="#estudos">
                 <span class="nav-indicator" aria-hidden="true"></span>
-                <span>Formação &amp; Estudos</span>
+                <span>Formação &amp; Jornada</span>
               </a>
             </li>
             <li>
@@ -111,21 +133,29 @@
             </li>
           </ul>
         </nav>
+
+        <!-- Navegação rápida (mobile / tablet) -->
+        <nav class="mobile-nav" aria-label="Navegação rápida">
+          <a class="mobile-nav-link is-active" href="#sobre">Sobre</a>
+          <a class="mobile-nav-link" href="#projetos">Projetos</a>
+          <a class="mobile-nav-link" href="#estudos">Formação</a>
+          <a class="mobile-nav-link" href="#habilidades">Habilidades</a>
+          <a class="mobile-nav-link" href="#contato">Contato</a>
+        </nav>
       </div>
 
-      <!-- EDITE AQUI: substitua os links pelos seus perfis reais -->
       <div class="social-links" aria-label="Redes e links profissionais">
-        <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <a href="https://github.com/rodrigokk1975" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Rodrigo Kenji Kataoka" title="GitHub">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
             <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
           </svg>
         </a>
-        <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/rodrigo-kenji-kataoka-5597113b4/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Rodrigo Kenji Kataoka" title="LinkedIn">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
             <path d="M4.98 3.5a2.48 2.48 0 1 0 0 4.96 2.48 2.48 0 0 0 0-4.96ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.82-2.06 3.75-2.06 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.63c0-1.34-.03-3.07-1.87-3.07-1.88 0-2.16 1.47-2.16 2.97V21h-4V9Z"/>
           </svg>
         </a>
-        <a href="mailto:seuemail@exemplo.com" aria-label="Enviar e-mail">
+        <a href="mailto:rodrigo.kenji.kataoka@gmail.com" aria-label="Enviar e-mail para Rodrigo Kenji Kataoka" title="E-mail">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="2" y="4" width="20" height="16" rx="2"></rect>
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
@@ -139,280 +169,462 @@
          ========================================================= -->
     <main class="content" id="conteudo">
       <!-- SOBRE -->
-      <section class="section" id="sobre" aria-labelledby="titulo-sobre">
+      <section class="section reveal" id="sobre" aria-labelledby="titulo-sobre">
         <div class="section-header">
           <h2 class="section-title" id="titulo-sobre">Sobre</h2>
         </div>
 
         <div class="prose">
-          <!-- EDITE AQUI: escreva 2 parágrafos curtos sobre você -->
           <p>
-            Sou estudante de tecnologia apaixonado por transformar ideias em páginas e aplicações claras, rápidas e fáceis de usar. Gosto de entender como as coisas funcionam por baixo dos panos — do HTML semântico e CSS bem organizado até a lógica em JavaScript.
+            Sou estudante de <strong>Sistemas de Informação na Unicamp</strong> e desenvolvedor focado em construir aplicações web e mobile completas — do banco de dados e arquitetura de APIs até interfaces rápidas e fáceis de usar.
           </p>
           <p>
-            Atualmente estou focado em construir projetos práticos que resolvem problemas reais do dia a dia, documentando meu código no GitHub e buscando minha primeira oportunidade para contribuir em um time de desenvolvimento.
+            Nos meus projetos priorizo código organizado, tipagem forte, validação de dados e testes automatizados. Atualmente busco uma oportunidade de <strong>estágio em desenvolvimento de software</strong> para contribuir com times de engenharia e evoluir resolvendo problemas reais em produção.
           </p>
         </div>
 
         <div class="now-card">
           <div class="now-header">
             <span class="mono-label">/agora</span>
-            <h3>O que estou estudando no momento</h3>
+            <h3>Em foco no momento</h3>
           </div>
           <ul class="now-list">
-            <li>JavaScript moderno (ES6+, consumo de APIs REST e manipulação do DOM)</li>
-            <li>CSS responsivo com Grid, Flexbox e boas práticas de acessibilidade</li>
-            <li>Versionamento com Git, branches e fluxo de Pull Requests no GitHub</li>
+            <li>Arquitetura full-stack com TypeScript, React, Node.js, Django e FastAPI</li>
+            <li>Desenvolvimento mobile com Flutter, Dart, Firebase e gestão de estado</li>
+            <li>Boas práticas de engenharia: Docker, PostgreSQL, WebSockets e testes com Vitest e pytest</li>
           </ul>
         </div>
       </section>
 
       <!-- PROJETOS -->
-      <section class="section" id="projetos" aria-labelledby="titulo-projetos">
+      <section class="section reveal" id="projetos" aria-labelledby="titulo-projetos">
         <div class="section-header">
           <h2 class="section-title" id="titulo-projetos">Projetos em Destaque</h2>
           <p class="section-subtitle">
-            Projetos selecionados que mostram como resolvo problemas na prática.
+            Aplicações completas que combinam back-end estruturado, banco de dados, testes e interface cuidada.
           </p>
         </div>
 
-        <div class="projects-list">
-          <!-- PROJETO 1 — EDITE AQUI com seus projetos reais -->
-          <article class="project-card">
-            <!-- Dica: quando tiver um print real, troque este bloco por <img class="project-thumb" src="img/projeto-1.png" alt="Tela do projeto..." /> -->
-            <div class="project-preview preview-1" aria-hidden="true">
+        <div class="project-filters" role="group" aria-label="Filtrar projetos por categoria">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">
+            Todos <span class="filter-count">5</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="fullstack" aria-pressed="false">
+            Full-Stack <span class="filter-count">3</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="dados" aria-pressed="false">
+            Dados &amp; API <span class="filter-count">1</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="mobile" aria-pressed="false">
+            Mobile <span class="filter-count">1</span>
+          </button>
+        </div>
+
+        <div class="projects-list" id="projects-list">
+          <!-- PROJETO 1: FinPulse -->
+          <article class="project-card" data-category="fullstack">
+            <div class="project-preview preview-finpulse" aria-hidden="true">
               <div class="preview-window">
                 <span class="dot"></span><span class="dot"></span><span class="dot"></span>
               </div>
               <div class="preview-body">
-                <div class="preview-bar w-60"></div>
-                <div class="preview-grid">
-                  <div class="preview-box"></div>
-                  <div class="preview-box"></div>
+                <div class="preview-kpi-row">
+                  <div class="preview-kpi"></div>
+                  <div class="preview-kpi accent"></div>
                 </div>
-                <div class="preview-bar w-80"></div>
-              </div>
-            </div>
-
-            <div class="project-info">
-              <div class="project-top">
-                <h3 class="project-title">Organizador de Estudos (StudyFlow)</h3>
-                <span class="project-year mono-label">2026</span>
-              </div>
-              <p class="project-desc">
-                Aplicação web para planejar matérias, controlar sessões Pomodoro e acompanhar o progresso semanal salvando os dados no navegador.
-              </p>
-              <p class="project-learning">
-                <strong>Aprendizado:</strong> persistência com <code>localStorage</code>, temporizador preciso e layout adaptável para celular.
-              </p>
-              <ul class="tag-list" aria-label="Tecnologias utilizadas">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>LocalStorage</li>
-              </ul>
-              <div class="project-links">
-                <a class="link-inline" href="https://github.com/seu-usuario/studyflow" target="_blank" rel="noopener noreferrer">
-                  Código no GitHub
-                  <span aria-hidden="true">↗</span>
-                </a>
-                <a class="link-inline link-accent" href="#" target="_blank" rel="noopener noreferrer">
-                  Ver Demo ao Vivo
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- PROJETO 2 -->
-          <article class="project-card">
-            <div class="project-preview preview-2" aria-hidden="true">
-              <div class="preview-window">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              </div>
-              <div class="preview-body">
-                <div class="preview-bar w-45"></div>
                 <div class="preview-chart">
                   <span style="height: 45%"></span>
-                  <span style="height: 75%"></span>
+                  <span style="height: 70%"></span>
                   <span style="height: 55%"></span>
-                  <span style="height: 90%"></span>
-                  <span style="height: 65%"></span>
+                  <span style="height: 92%"></span>
+                  <span style="height: 68%"></span>
                 </div>
               </div>
             </div>
 
             <div class="project-info">
               <div class="project-top">
-                <h3 class="project-title">Painel Financeiro Pessoal</h3>
-                <span class="project-year mono-label">2026</span>
+                <h3 class="project-title">FinPulse</h3>
+                <span class="project-badge mono-label">Full-Stack</span>
               </div>
               <p class="project-desc">
-                Controle simples de entradas e saídas mensais com filtros por categoria, cálculo automático de saldo e exportação de resumo em CSV.
+                Aplicação full-stack de controle financeiro pessoal com autenticação JWT, gestão de contas, transações filtráveis e dashboard analítico.
               </p>
               <p class="project-learning">
-                <strong>Aprendizado:</strong> manipulação de arrays (<code>map</code>/<code>filter</code>/<code>reduce</code>) e validação de formulários.
+                <strong>Destaques técnicos:</strong> API REST em Django/DRF com SimpleJWT, PostgreSQL em Docker Compose, gráficos com Recharts e suíte de testes em <code>pytest</code>.
               </p>
-              <ul class="tag-list" aria-label="Tecnologias utilizadas">
-                <li>JavaScript</li>
-                <li>CSS Grid</li>
-                <li>Acessibilidade</li>
+              <ul class="tag-list" aria-label="Tecnologias utilizadas no FinPulse">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Python</li>
+                <li>Django</li>
+                <li>DRF</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+                <li>pytest</li>
               </ul>
               <div class="project-links">
-                <a class="link-inline" href="https://github.com/seu-usuario/painel-financeiro" target="_blank" rel="noopener noreferrer">
+                <a class="link-inline link-accent" href="https://github.com/rodrigokk1975/financial-control" target="_blank" rel="noopener noreferrer">
                   Código no GitHub
-                  <span aria-hidden="true">↗</span>
-                </a>
-                <a class="link-inline link-accent" href="#" target="_blank" rel="noopener noreferrer">
-                  Ver Demo ao Vivo
                   <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- PROJETO 3 -->
-          <article class="project-card">
-            <div class="project-preview preview-3" aria-hidden="true">
+          <!-- PROJETO 2: PulseChat -->
+          <article class="project-card" data-category="fullstack">
+            <div class="project-preview preview-pulsechat" aria-hidden="true">
               <div class="preview-window">
                 <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="preview-online"></span>
               </div>
-              <div class="preview-body">
-                <div class="preview-search"></div>
-                <div class="preview-bar w-80"></div>
-                <div class="preview-bar w-60"></div>
+              <div class="preview-body preview-chat">
+                <div class="chat-bubble incoming w-70"></div>
+                <div class="chat-bubble outgoing w-60"></div>
+                <div class="chat-bubble incoming w-50"></div>
               </div>
             </div>
 
             <div class="project-info">
               <div class="project-top">
-                <h3 class="project-title">Buscador de Perfis e Repositórios</h3>
-                <span class="project-year mono-label">2026</span>
+                <h3 class="project-title">PulseChat</h3>
+                <span class="project-badge mono-label">Full-Stack</span>
               </div>
               <p class="project-desc">
-                Interface rápida que consome a API pública do GitHub para pesquisar usuários, listar repositórios recentes e filtrar por linguagem.
+                Chat em tempo real com salas, WebSockets autenticados via JWT, presença online multi-aba e testes automatizados em arquitetura monorepo.
               </p>
               <p class="project-learning">
-                <strong>Aprendizado:</strong> requisições assíncronas com <code>fetch</code>, tratamento de erros e estados de carregamento.
+                <strong>Destaques técnicos:</strong> monorepo com npm workspaces compartilhando schemas <code>Zod</code> entre React 19 e servidor <code>Socket.IO</code> + Prisma ORM.
               </p>
-              <ul class="tag-list" aria-label="Tecnologias utilizadas">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Fetch API</li>
-                <li>GitHub API</li>
+              <ul class="tag-list" aria-label="Tecnologias utilizadas no PulseChat">
+                <li>Node.js</li>
+                <li>Socket.IO</li>
+                <li>TypeScript</li>
+                <li>React 19</li>
+                <li>Prisma</li>
+                <li>Zod</li>
+                <li>Vitest</li>
               </ul>
               <div class="project-links">
-                <a class="link-inline" href="https://github.com/seu-usuario/github-finder" target="_blank" rel="noopener noreferrer">
+                <a class="link-inline link-accent" href="https://github.com/rodrigokk1975/real-time-chat" target="_blank" rel="noopener noreferrer">
                   Código no GitHub
                   <span aria-hidden="true">↗</span>
                 </a>
-                <a class="link-inline link-accent" href="#" target="_blank" rel="noopener noreferrer">
-                  Ver Demo ao Vivo
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 3: Studio Agenda -->
+          <article class="project-card" data-category="fullstack">
+            <div class="project-preview preview-agenda" aria-hidden="true">
+              <div class="preview-window">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+              <div class="preview-body">
+                <div class="preview-bar w-50"></div>
+                <div class="preview-calendar">
+                  <span></span><span class="booked"></span><span></span><span></span>
+                  <span class="booked"></span><span></span><span></span><span class="booked"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-top">
+                <h3 class="project-title">Studio Agenda</h3>
+                <span class="project-badge mono-label">Full-Stack</span>
+              </div>
+              <p class="project-desc">
+                Plataforma full-stack de agendamento com RBAC (cliente, profissional e admin), cálculo de disponibilidade, política de cancelamento de 24h e notificações por e-mail.
+              </p>
+              <p class="project-learning">
+                <strong>Destaques técnicos:</strong> prevenção de conflitos de horário no PostgreSQL, proteção com Helmet, e-mails transacionais com <code>Resend</code> e testes com Vitest/Supertest.
+              </p>
+              <ul class="tag-list" aria-label="Tecnologias utilizadas no Studio Agenda">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Prisma</li>
+                <li>PostgreSQL</li>
+                <li>Resend</li>
+                <li>Docker</li>
+              </ul>
+              <div class="project-links">
+                <a class="link-inline link-accent" href="https://github.com/rodrigokk1975/booking-system" target="_blank" rel="noopener noreferrer">
+                  Código no GitHub
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 4: Dashboard Econômico -->
+          <article class="project-card" data-category="dados">
+            <div class="project-preview preview-dashboard" aria-hidden="true">
+              <div class="preview-window">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+              <div class="preview-body">
+                <div class="preview-pills">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="preview-chart preview-chart-alt">
+                  <span style="height: 38%"></span>
+                  <span style="height: 62%"></span>
+                  <span style="height: 82%"></span>
+                  <span style="height: 58%"></span>
+                  <span style="height: 90%"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-top">
+                <h3 class="project-title">Dashboard Econômico</h3>
+                <span class="project-badge mono-label">Dados &amp; API</span>
+              </div>
+              <p class="project-desc">
+                Dashboard interativo de indicadores do Banco Central (Dólar, Selic e IPCA) integrando pipeline de dados em Python com cache TTL e front-end React.
+              </p>
+              <p class="project-learning">
+                <strong>Destaques técnicos:</strong> coleta assíncrona com <code>httpx</code>, tratamento com <code>pandas</code>, cache TTL via <code>cachetools</code> e visualização com Recharts.
+              </p>
+              <ul class="tag-list" aria-label="Tecnologias utilizadas no Dashboard Econômico">
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>pandas</li>
+                <li>Pydantic</li>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Recharts</li>
+              </ul>
+              <div class="project-links">
+                <a class="link-inline link-accent" href="https://github.com/rodrigokk1975/dashboard" target="_blank" rel="noopener noreferrer">
+                  Código no GitHub
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 5: Obra BOX -->
+          <article class="project-card" data-category="mobile">
+            <div class="project-preview preview-obrabox" aria-hidden="true">
+              <div class="preview-phone">
+                <div class="phone-notch"></div>
+                <div class="phone-checklist">
+                  <div class="check-row done"><span></span></div>
+                  <div class="check-row done"><span></span></div>
+                  <div class="check-row"><span></span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-top">
+                <h3 class="project-title">Obra BOX</h3>
+                <span class="project-badge mono-label">Mobile</span>
+              </div>
+              <p class="project-desc">
+                Aplicativo mobile para gestão de obras de engenharia civil com checklists hierárquicos, evidências fotográficas e fluxo de validação em campo.
+              </p>
+              <p class="project-learning">
+                <strong>Destaques técnicos:</strong> autenticação e sincronização em tempo real com Firebase Auth e Cloud Firestore, captura de imagens e upload via <code>Cloudinary</code>.
+              </p>
+              <ul class="tag-list" aria-label="Tecnologias utilizadas no Obra BOX">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Firebase</li>
+                <li>Cloud Firestore</li>
+                <li>Cloudinary</li>
+                <li>Dio</li>
+              </ul>
+              <div class="project-links">
+                <a class="link-inline link-accent" href="https://github.com/rodrigokk1975/obrabox" target="_blank" rel="noopener noreferrer">
+                  Código no GitHub
                   <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </div>
           </article>
         </div>
+
+        <p class="projects-more">
+          Quer explorar mais experimentos (como SoundWave, Kanban, Auth API, URL Shortener e análise de dados)?
+          <a class="link-inline link-accent" href="https://github.com/rodrigokk1975?tab=repositories" target="_blank" rel="noopener noreferrer">
+            Ver todos os repositórios no GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </p>
       </section>
 
-      <!-- FORMAÇÃO & ESTUDOS -->
-      <section class="section" id="estudos" aria-labelledby="titulo-estudos">
+      <!-- FORMAÇÃO & JORNADA -->
+      <section class="section reveal" id="estudos" aria-labelledby="titulo-estudos">
         <div class="section-header">
           <h2 class="section-title" id="titulo-estudos">Formação &amp; Jornada</h2>
         </div>
 
         <ol class="timeline">
-          <!-- EDITE AQUI com sua faculdade, cursos ou marcos de estudo -->
           <li class="timeline-item">
-            <span class="timeline-period mono-label">2025 — Atual</span>
+            <span class="timeline-period mono-label">2023 — Atual</span>
             <div class="timeline-body">
-              <h3>Análise e Desenvolvimento de Sistemas (ou Ciência da Computação)</h3>
-              <p class="timeline-org">Sua Instituição de Ensino</p>
+              <h3>Bacharelado em Sistemas de Informação</h3>
+              <p class="timeline-org">Universidade Estadual de Campinas (Unicamp)</p>
               <p>
-                Fundamentos de algoritmos, estruturas de dados, banco de dados relacional, engenharia de software e desenvolvimento web.
+                Base sólida em algoritmos, estruturas de dados, bancos de dados relacionais, engenharia de software, arquitetura de sistemas e desenvolvimento de aplicações web e mobile.
               </p>
             </div>
           </li>
 
           <li class="timeline-item">
-            <span class="timeline-period mono-label">2025 — 2026</span>
+            <span class="timeline-period mono-label">Projetos Práticos</span>
             <div class="timeline-body">
-              <h3>Trilha de Desenvolvimento Web Front-End</h3>
-              <p class="timeline-org">Projetos Práticos &amp; Estudo Autodidata</p>
+              <h3>Engenharia Full-Stack, Mobile &amp; Dados</h3>
+              <p class="timeline-org">Portfólio de Sistemas Ponta a Ponta</p>
               <p>
-                Construção de interfaces responsivas do zero, consumo de APIs REST, boas práticas de versionamento com Git e publicação na web.
+                Desenvolvimento contínuo de sistemas reais integrando front-end moderno, APIs REST e WebSockets, modelagem de dados em PostgreSQL/Firebase, conteinerização com Docker e testes automatizados.
               </p>
             </div>
           </li>
         </ol>
       </section>
 
-      <!-- HABILIDADES (SEM BARRAS DE PORCENTAGEM) -->
-      <section class="section" id="habilidades" aria-labelledby="titulo-habilidades">
+      <!-- HABILIDADES & FERRAMENTAS -->
+      <section class="section reveal" id="habilidades" aria-labelledby="titulo-habilidades">
         <div class="section-header">
           <h2 class="section-title" id="titulo-habilidades">Habilidades &amp; Ferramentas</h2>
+          <p class="section-subtitle">
+            Tecnologias aplicadas na prática em projetos web, mobile, APIs e análise de dados.
+          </p>
         </div>
 
         <div class="skills-grid">
           <div class="skill-group">
-            <h3>Front-End</h3>
+            <h3>Linguagens</h3>
             <ul class="tag-list">
-              <li>HTML5 Semântico</li>
-              <li>CSS3 / Flexbox / Grid</li>
+              <li>TypeScript</li>
               <li>JavaScript (ES6+)</li>
+              <li>Python</li>
+              <li>Dart</li>
+              <li>SQL</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>C</li>
+              <li>C++</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Front-End &amp; Mobile</h3>
+            <ul class="tag-list">
+              <li>React 19</li>
+              <li>Flutter</li>
+              <li>Tailwind CSS</li>
+              <li>Vite</li>
+              <li>React Router</li>
+              <li>Recharts</li>
+              <li>BLoC</li>
+              <li>dnd-kit</li>
               <li>Design Responsivo</li>
               <li>Acessibilidade (a11y)</li>
             </ul>
           </div>
 
           <div class="skill-group">
-            <h3>Back-End &amp; Dados (Em estudo)</h3>
+            <h3>Back-End &amp; APIs</h3>
             <ul class="tag-list">
               <li>Node.js</li>
-              <li>Python</li>
+              <li>Express</li>
+              <li>Django</li>
+              <li>Django REST Framework</li>
+              <li>FastAPI</li>
+              <li>Socket.IO</li>
               <li>APIs REST</li>
-              <li>SQL Básico</li>
+              <li>JWT / SimpleJWT</li>
+              <li>Zod</li>
+              <li>Pydantic</li>
+              <li>Resend</li>
+              <li>Helmet</li>
             </ul>
           </div>
 
           <div class="skill-group">
-            <h3>Ferramentas &amp; Fluxo</h3>
+            <h3>Bancos de Dados &amp; Cloud</h3>
+            <ul class="tag-list">
+              <li>PostgreSQL</li>
+              <li>Prisma ORM</li>
+              <li>SQLAlchemy</li>
+              <li>SQLite</li>
+              <li>Firebase Auth</li>
+              <li>Cloud Firestore</li>
+              <li>Cloudinary</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Dados &amp; Automação</h3>
+            <ul class="tag-list">
+              <li>pandas</li>
+              <li>NumPy</li>
+              <li>Matplotlib</li>
+              <li>Seaborn</li>
+              <li>Jupyter Notebook</li>
+              <li>BeautifulSoup4</li>
+              <li>Requests</li>
+              <li>httpx</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Testes, DevOps &amp; Ferramentas</h3>
             <ul class="tag-list">
               <li>Git &amp; GitHub</li>
-              <li>VS Code</li>
-              <li>DevTools</li>
-              <li>Figma (leitura)</li>
-              <li>GitHub Pages / Vercel</li>
+              <li>Docker &amp; Compose</li>
+              <li>pytest</li>
+              <li>Vitest</li>
+              <li>Supertest</li>
+              <li>ESLint</li>
+              <li>Ruff</li>
+              <li>Monorepo (Workspaces)</li>
+              <li>Vercel</li>
             </ul>
           </div>
         </div>
       </section>
 
       <!-- CONTATO -->
-      <section class="section" id="contato" aria-labelledby="titulo-contato">
+      <section class="section reveal" id="contato" aria-labelledby="titulo-contato">
         <div class="section-header">
           <h2 class="section-title" id="titulo-contato">Contato</h2>
         </div>
 
         <div class="contact-card">
           <p class="contact-text">
-            Estou aberto a oportunidades de estágio, projetos colaborativos e conversas sobre desenvolvimento web. Se quiser trocar uma ideia, é só mandar uma mensagem!
+            Estou aberto a oportunidades de <strong>estágio em desenvolvimento de software</strong>, projetos colaborativos e conversas técnicas. Se quiser trocar uma ideia, é só mandar uma mensagem!
           </p>
 
           <div class="contact-actions">
-            <!-- EDITE AQUI: coloque seu e-mail real no href e no data-email -->
-            <a class="btn btn-primary" href="mailto:seuemail@exemplo.com">
+            <a class="btn btn-primary" href="mailto:rodrigo.kenji.kataoka@gmail.com">
               Enviar e-mail
             </a>
             <button
               type="button"
               class="btn btn-secondary"
               id="copy-email-btn"
-              data-email="seuemail@exemplo.com"
+              data-email="rodrigo.kenji.kataoka@gmail.com"
             >
               Copiar e-mail
             </button>
+            <a
+              class="btn btn-secondary"
+              href="https://www.linkedin.com/in/rodrigo-kenji-kataoka-5597113b4/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn ↗
+            </a>
           </div>
           <p class="copy-feedback mono-label" id="copy-feedback" role="status" aria-live="polite"></p>
         </div>
@@ -421,8 +633,8 @@
       <!-- FOOTER -->
       <footer class="footer">
         <p>
-          Construído por <strong>Seu Nome</strong> com HTML, CSS e JavaScript puros.
-          <a href="https://github.com/seu-usuario/portfolio" target="_blank" rel="noopener noreferrer">
+          Construído por <strong>Rodrigo Kenji Kataoka</strong> com HTML, CSS e JavaScript puros.
+          <a href="https://github.com/rodrigokk1975/portfolio" target="_blank" rel="noopener noreferrer">
             Ver código no GitHub ↗
           </a>
         </p>
