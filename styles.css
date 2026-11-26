@@ -487,46 +487,6 @@ code {
   color: var(--accent);
 }
 
-/* Cartão "/agora" */
-.now-card {
-  margin-top: 1.75rem;
-  padding: 1.25rem 1.4rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-}
-
-.now-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  margin-bottom: 0.85rem;
-}
-
-.now-header h3 {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.now-list {
-  display: grid;
-  gap: 0.5rem;
-}
-
-.now-list li {
-  position: relative;
-  padding-left: 1.1rem;
-  font-size: 0.94rem;
-}
-
-.now-list li::before {
-  content: "›";
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-weight: 700;
-}
-
 /* ==========================================================================
    Filtros e Cards de Projetos
    ========================================================================== */
